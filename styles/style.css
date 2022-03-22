@@ -89,3 +89,20 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.bear{
+    display : flex;
+    box-shadow: var(--shadow);
+}
+.fish{
+    display : flex;
+    box-shadow: var(--shadow);
+}
+.goblin{
+    display : flex;
+    box-shadow: var(--shadow);
+}
+.snake{
+    display : flex;
+    box-shadow: var(--shadow);
+}
