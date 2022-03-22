@@ -10,3 +10,9 @@ export async function getBears() {
     return data.body;
 }
 
+export async function getFish() {
+    const data = await client
+        .from ('fish')
+        .select('*');
+    return data.body;
+}

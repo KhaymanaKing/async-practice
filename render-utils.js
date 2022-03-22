@@ -21,3 +21,27 @@ export function renderBear(bear){
 
 }
 
+export function renderFish(fish){
+    const fishEl = document.createElement ('div');
+    const nameEl = document.createElement ('h3');
+    const colorfulEl = document.createElement ('p');
+    const saltwaterEl = document.createElement('p');
+    const tasteGuessEl = document.createElement('p');
+    
+
+
+    fishEl.classList.add('fish');
+
+    nameEl.textContent = `Fish name:  ${fish.name}`;
+    colorfulEl.textContent = `Is it colorful:  ${fish.colorful}`;
+    saltwaterEl.textContent = `Live in saltwater: ${fish.saltwater}`;
+    tasteGuessEl.textContent = `How I think it would taste: ${fish.tasteguess}`;
+    
+
+    fishEl.append(nameEl, colorfulEl, saltwaterEl, tasteGuessEl,);
+
+    return fishEl;
+
+}
+
+
