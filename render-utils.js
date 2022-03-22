@@ -12,11 +12,12 @@ export function renderBear(bear){
     typeEl.textContent = bear.type;
     colorEl.textContent = bear.color;
     locationEl.textContent = bear.location;
-    famousBearsEl.textContent = bear.famousBears;
-    willEatYouEl.textContent = bear.
+    famousBearsEl.textContent = bear.famousbears;
+    willEatYouEl.textContent = bear.willeatyou;
 
-        bearEl.append(typeEl, colorEl, locationEl, famousBearsEl, willEatYouEl);
+    bearEl.append(typeEl, colorEl, locationEl, famousBearsEl, willEatYouEl);
 
-
+    return bearEl;
 
 }
+

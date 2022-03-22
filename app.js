@@ -1,9 +1,17 @@
 // import functions and grab DOM elements
 import { getBears } from './fetch-utils.js';
-import { reflect } from './render-utils.js';
+import { renderBear } from './render-utils.js';
 // let state
 
 // set event listeners 
+
+const bearListEl = document.querySelector('.bear-list');
+window.addEventListener('load', async () => {
+    fetchAndDisplayBears();
+});
+
+
+
 
 async function fetchAndDisplayBears(){
 
