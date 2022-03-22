@@ -16,3 +16,10 @@ export async function getFish() {
         .select('*');
     return data.body;
 }
+
+export async function getgoblin() {
+    const data = await client
+        .from ('goblins')
+        .select('*');
+    return data.body;
+}

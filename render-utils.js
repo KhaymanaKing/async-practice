@@ -44,4 +44,27 @@ export function renderFish(fish){
 
 }
 
+export function renderGoblin(goblin){
+    const goblinEl = document.createElement ('div');
+    const nameEl = document.createElement ('h3');
+    const strengthEl = document.createElement ('p');
+    const fearsEl = document.createElement('p');
+    const houseMaterialEl = document.createElement('p');
+    
+
+
+    goblinEl.classList.add('goblin');
+
+    nameEl.textContent = `Goblin name:  ${goblin.name}`;
+    strengthEl.textContent = `Strength of  ${goblin.strength}`;
+    fearsEl.textContent = `Afraid of ${goblin.fears}`;
+    houseMaterialEl.textContent = `House is made of: ${goblin.housematerial}`;
+    
+
+    goblinEl.append(nameEl, strengthEl, fearsEl, houseMaterialEl,);
+
+    return goblinEl;
+
+}
+
 
