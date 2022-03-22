@@ -1,9 +1,10 @@
 // import functions and grab DOM elements
 import { getBears } from './fetch-utils.js';
 import { getFish } from './fetch-utils.js';
-import { getgoblin } from './fetch-utils.js';
+import { getGoblin } from './fetch-utils.js';
 import { renderBear } from './render-utils.js';
 import { renderFish } from './render-utils.js';
+import { renderGoblin } from './render-utils.js';
 
 // let state
 
@@ -13,7 +14,7 @@ const listEl = document.querySelector('.bear-list', '.fish-list');
 window.addEventListener('load', async () => {
     fetchAndDisplayBears();
     fetchAndDisplayFish();
-    fetchAndDisplayGoblins()
+    fetchAndDisplayGoblins();
 });
 
 
@@ -39,10 +40,10 @@ async function fetchAndDisplayFish(){
     }
 }
 async function fetchAndDisplayGoblins(){
-    const goblins = await getgoblin();
+    const goblins = await getGoblin();
     for (let goblin of goblins) {
 
-        const goblinEl = renderGoblin(Goblin);
+        const goblinEl = renderGoblin(goblin);
         listEl.append(goblinEl);
     }
 }

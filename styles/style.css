@@ -98,3 +98,7 @@ footer {
     display : flex;
     box-shadow: var(--shadow);
 }
+.goblin{
+    display : flex;
+    box-shadow: var(--shadow);
+}

@@ -17,7 +17,7 @@ export async function getFish() {
     return data.body;
 }
 
-export async function getgoblin() {
+export async function getGoblin() {
     const data = await client
         .from ('goblins')
         .select('*');
