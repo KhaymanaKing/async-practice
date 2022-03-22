@@ -5,3 +5,10 @@ const SUPABASE_URL = "https://iogrfcwglwniswuilfsw.supabase.co"
 
 const client = createClient(SUPABASE_URL, process.env.SUPABASE_KEY);
 
+export async function getBears() {
+    const data = await client
+        .from ('Bears')
+        .select('*');
+    return data.body;
+}
+
