@@ -2,9 +2,11 @@
 import { getBears } from './fetch-utils.js';
 import { getFish } from './fetch-utils.js';
 import { getGoblin } from './fetch-utils.js';
-import { renderBear } from './render-utils.js';
+import { getSnake } from './fetch-utils.js';
+import { renderBear, renderSnake } from './render-utils.js';
 import { renderFish } from './render-utils.js';
 import { renderGoblin } from './render-utils.js';
+import { renderSnake } from './render-utils.js';
 
 // let state
 
@@ -15,6 +17,7 @@ window.addEventListener('load', async () => {
     fetchAndDisplayBears();
     fetchAndDisplayFish();
     fetchAndDisplayGoblins();
+    fetchAndDisplaySnake();
 });
 
 
@@ -44,6 +47,14 @@ async function fetchAndDisplayGoblins(){
     for (let goblin of goblins) {
 
         const goblinEl = renderGoblin(goblin);
+        listEl.append(goblinEl);
+    }
+}
+async function fetchAndDisplaySnake(){
+    const snakes = await getSnake();
+    for (let snake of snakes) {
+
+        const snakeEl = renderSnake(snake);
         listEl.append(goblinEl);
     }
 }

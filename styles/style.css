@@ -102,3 +102,7 @@ footer {
     display : flex;
     box-shadow: var(--shadow);
 }
+.snake{
+    display : flex;
+    box-shadow: var(--shadow);
+}

@@ -67,4 +67,27 @@ export function renderGoblin(goblin){
 
 }
 
+export function renderSnake(snake){
+    const snakeEl = document.createElement ('div');
+    const nameEl = document.createElement ('h3');
+    const colorfulEl = document.createElement ('p');
+    const venomousEl = document.createElement('p');
+    const locationEl = document.createElement('p');
+    
+
+
+    snakeEl.classList.add('snake');
+
+    nameEl.textContent = `Snake name:  ${snake.name}`;
+    colorfulEl.textContent = `Is colorful:  ${snake.colorful}`;
+    venomousEl.textContent = `Is venomous: ${snake.venomous}`;
+    locationEl.textContent = `House is made of: ${snake.location}`;
+    
+
+    snakeEl.append(nameEl, colorfulEl, venomousEl, locationEl);
+
+    return snakeEl;
+
+}
+
 

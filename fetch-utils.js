@@ -23,3 +23,9 @@ export async function getGoblin() {
         .select('*');
     return data.body;
 }
+export async function getSnake() {
+    const data = await client
+        .from ('snakes')
+        .select('*');
+    return data.body;
+}
