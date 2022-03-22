@@ -1,12 +1,10 @@
 // import functions and grab DOM elements
-import { getBears } from './fetch-utils.js';
-import { getFish } from './fetch-utils.js';
-import { getGoblin } from './fetch-utils.js';
-import { getSnake } from './fetch-utils.js';
-import { renderBear, renderSnake } from './render-utils.js';
-import { renderFish } from './render-utils.js';
-import { renderGoblin } from './render-utils.js';
-import { renderSnake } from './render-utils.js';
+import { getBears, getFish, getGoblin, getSnake } from './fetch-utils.js';
+
+import { renderBear, renderSnake, renderFish, renderGoblin } from './render-utils.js';
+
+
+
 
 // let state
 
@@ -55,7 +53,7 @@ async function fetchAndDisplaySnake(){
     for (let snake of snakes) {
 
         const snakeEl = renderSnake(snake);
-        listEl.append(goblinEl);
+        listEl.append(snakeEl);
     }
 }
   // get user input
